@@ -1,4 +1,4 @@
-# Wallet API POC
+# Wallet API
 
 A small wallet API that shows safe money transfers using Django 6, Django Ninja, JWT, database transactions and idempotency.
 
