@@ -77,3 +77,13 @@ JWT_SECRET = os.environ["JWT_SECRET"]
 JWT_ALGORITHM = "HS256"
 JWT_ACCESS_MINUTES = 15
 JWT_REFRESH_MINUTES = 60 * 24 * 7
+
+import sys
+
+if "pytest" in sys.modules:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
